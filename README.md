@@ -1,46 +1,157 @@
-# Getting Started with Create React App
+<p align="center">
+  <img width="150px" src="https://user-images.githubusercontent.com/122017847/223829694-40263201-d3ae-48ba-badb-fb04e638b112.svg" alt="Messages">
+</p>
+<h1 align="center">
+  Messenger - приложение для обмена<br> мгновенными сообщениями
+</h1>
+<p align="center">
+  <img width="750px" src="https://user-images.githubusercontent.com/122017847/225255174-e622aeca-8a88-4860-99f2-5c6a34f866b3.png" alt="Messages">
+<p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📝 Описание проекта:
 
-## Available Scripts
+Приложение сконфигурировано при помощи шаблона `create-react-app --template typescript`
 
-In the project directory, you can run:
+#### Адаптировано под:
 
-### `npm start`
+- 📱 mobile, tablet
+- 💻 laptop
+- 🖥️ desktop
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Cтэк:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- `TypeScript`
+- `React`
+- `React Router`
+- `Firebase`
+- `Recoil`
+- `Styled Components`
 
-### `npm test`
+## ⚙️ Описание функциональности
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Содержание
 
-### `npm run build`
+- [Авторизация](#авторизация)
+- [Восстановление пароля](#восстановление-пароля)
+- [Главная страница](#главная-страница)
+- [Беседы](#беседы)
+- [Уведомления](#уведомления)
+- [Тема интерфейса](#тема-интерфейса)
+- [Удаление беседы](#удаление-беседы)
+- [Выход](#выход)
+- [Мобильная версия](#мобильная-версия)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Авторизация
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+При запуске приложения будет доступна страница авторизации. На ней можно авторизоваться через учетную запись Google, либо через ранее созданный аккаунт. Если аккаунта еще нет, можно зарегистрироваться используя любой e-mail к которому у вас есть доступ. Пароль можно указать любой. После успешной регистрации, необходимо будет указать имя пользователя по которому вас смогут находить другие пользователи:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<kbd>
+    <img src="https://user-images.githubusercontent.com/122017847/225100586-7ab607cf-8b37-4263-abb5-08f85df02168.gif" />
+</kbd>
+  
+#
+  
+Также, при указании имени пользователя, опционально можно установить аватар:
+  
+<kbd>
+    <img src="https://user-images.githubusercontent.com/122017847/225104666-54dd96f6-0081-4ae4-8c1a-a5c02416fcda.gif" />
+</kbd>
 
-### `npm run eject`
+#
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Восстановление пароля
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+В случае, если вы забыли пароль, на странице авторизации необходимо выбрать «Забыли пароль», далее указать почту, на которую зарегистрирован аккаунт. На эту почту придет письмо с ссылкой для изменения пароля:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<kbd>
+    <img src="https://user-images.githubusercontent.com/122017847/225103595-b035da10-8559-427a-a0de-a846a22bfc10.gif" />
+</kbd>
+  
+#
+  
+### Главная страница
+  
+На основной странице будет доступен сам чат. Через поле поиска можно найти определенного пользователя и создать с ним беседу, после чего можно начинать с ним переписку. Список текущих бесед сортируется по времени создания беседы, либо если имеется, то по времени получения последнего сообщения:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<kbd>
+    <img src="https://user-images.githubusercontent.com/122017847/225103756-b19ee584-7a83-4498-9fb0-cb603d6a67c8.gif" />
+</kbd>
+  
+#
+  
+### Беседы
+  
+При клике на беседу будет открыто окно диалога, где можно отправлять сообщения. При наличии непрочитанного сообщения, слева от беседы будет отображен синий индикатор. После прочтения сообщения вашим собеседником будет отображен текст «Прочитано»:
 
-## Learn More
+<kbd>
+    <img src="https://user-images.githubusercontent.com/122017847/225110201-e10444d8-6f31-42bb-b756-6f71a06a7b3f.gif" />
+</kbd>
+  
+#
+  
+### Уведомления
+  
+При получении нового сообщения на странице появится уведомление, кликнув по которому можно перейти в чат с отправителем:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<kbd>
+    <img src="https://user-images.githubusercontent.com/122017847/225111232-9c99abd6-6871-4f4b-93a2-faf6daf0b442.gif" />
+</kbd>
+  
+#
+  
+Также при создании новой беседы с вашим участием будет отображено уведомление:
+  
+<kbd>
+    <img src="https://user-images.githubusercontent.com/122017847/225111423-adcefb31-85e8-42f3-bff4-189728954b87.gif" />
+</kbd>
+  
+#
+  
+### Тема интерфейса
+  
+В приложении доступны две темы: светлая и темная. При запуске приложения автоматически будет применена тема которая установлена на вашем устройстве. С помощью переключателя темы в правом верхнем углу можно установить только светлую тему или только темную, при повторном входе в приложение, автоматически будет применена тема, которую вы установили ранее или ваша системная тема:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<kbd>
+    <img src="https://user-images.githubusercontent.com/122017847/225115297-e3a7ae4b-9972-48be-be5d-af1be028395c.gif" />
+</kbd>
+  
+#
+  
+### Удаление беседы
+
+Беседу можно удалить кликнув на иконку с корзиной рядом с полем ввода, после подтверждения удаления текущая беседа и все связанные с ней сообщения будут удалены:
+
+<kbd>
+    <img src="https://user-images.githubusercontent.com/122017847/225115819-e3cd0b00-7f7e-4686-8a2e-0767de4933bb.gif" />
+</kbd>
+  
+#
+  
+### Выход
+  <kbd>
+    <img src="https://user-images.githubusercontent.com/122017847/225115433-0219e799-097b-4dbd-ad70-1f752e5261e4.gif" />
+  </kbd>
+  
+#
+  
+### Мобильная версия
+  
+Приложение адаптировано под комфортное использование на мобильном телефоне:
+
+<div>
+  <kbd>
+    <img width="400" src="https://user-images.githubusercontent.com/122017847/225254011-1da8a2e5-abab-4ce5-9569-0fbbe2fa44b9.gif"/>
+  </kbd>
+  <kbd>
+    <img width="400" src="https://user-images.githubusercontent.com/122017847/225254138-f54d2493-766f-40ce-8d27-469a96177a12.gif"/>
+  </kbd>
+</div>
+<br />
+<div>
+ <kbd>
+    <img width="400" src="https://user-images.githubusercontent.com/122017847/225254260-ea088f3c-dc7f-4b61-8d6f-3f228dacef49.gif" />
+ </kbd>
+  <kbd>
+    <img width="400" src="https://user-images.githubusercontent.com/122017847/225254364-cf1b52b7-67c0-4a3f-91c2-8c8dcd803881.gif" />
+ </kbd>
+</div>
