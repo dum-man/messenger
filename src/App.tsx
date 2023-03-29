@@ -3,16 +3,15 @@ import { Routes, Route } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { toast } from "react-hot-toast";
-import ProtectedRoute from "./app/ProtectedRoute";
-import AuthRoute from "./app/AuthRoute";
-import Signup from "./pages/Signup/Signup";
-import Login from "./pages/Login/Login";
-import Main from "./pages/Main/Main";
+import ProtectedRoute from "./app/routes/ProtectedRoute";
+import AuthRoute from "./app/routes/AuthRoute";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
+import Main from "./pages/Main";
 import { conversationsState } from "./app/atoms/conversationsState";
-import { getConversations } from "./app/service/conversationsService";
-import { auth } from "./app/firebase";
-import { getMessages } from "./app/service/messagesService";
 import { messagesState } from "./app/atoms/messagesState";
+import { getConversations, getMessages } from "./app/api";
+import { auth } from "./firebase";
 
 const App = () => {
   let vh = window.innerHeight * 0.01;

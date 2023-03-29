@@ -5,6 +5,8 @@ export interface Context {
   setSidebarOpen: (open: SetStateAction<boolean>) => void;
   deleteWindowOpen: boolean;
   setDeleteWindowOpen: (open: SetStateAction<boolean>) => void;
+  setUserDataOpen: boolean;
+  setSetUserDataOpen: (open: SetStateAction<boolean>) => void;
   username: string;
   setUsername: (username: SetStateAction<string>) => void;
   usersVisible: boolean;
@@ -22,6 +24,7 @@ interface ContextProviderProps {
 const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [deleteWindowOpen, setDeleteWindowOpen] = useState(false);
+  const [setUserDataOpen, setSetUserDataOpen] = useState(false);
   const [usersVisible, setUsersVisible] = useState(false);
   const [username, setUsername] = useState("");
   const [usersLoading, setUsersLoading] = useState(false);
@@ -33,6 +36,8 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
         setSidebarOpen,
         deleteWindowOpen,
         setDeleteWindowOpen,
+        setUserDataOpen,
+        setSetUserDataOpen,
         username,
         setUsername,
         usersVisible,
