@@ -20,7 +20,7 @@ const AuthSection = styled.section`
   justify-content: center;
   align-items: center;
   @media (max-width: 768px) {
-    flex: 2;
+    flex: 1.2;
   }
 `;
 

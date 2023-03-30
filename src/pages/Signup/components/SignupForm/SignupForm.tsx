@@ -16,6 +16,9 @@ const Wrapper = styled.div`
   min-width: 300px;
   max-width: 450px;
   padding: 0 10px;
+  @media (max-width: 768px) {
+    margin-bottom: auto;
+  }
 `;
 
 const TitleWrapper = styled.div`
